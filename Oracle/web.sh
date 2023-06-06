@@ -1,8 +1,3 @@
-#!/bin/bash
-
-# Update the system
-#sudo yum update -y
-
 # Install Apache
 sudo yum install httpd -y
 
