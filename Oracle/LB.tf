@@ -14,11 +14,11 @@ resource "oci_load_balancer_load_balancer" "load_balancer" {
 resource "oci_load_balancer_backend_set" "backend_set" {
 
     load_balancer_id = oci_load_balancer_load_balancer.load_balancer.id
-    name = "Backend set LB"
-    policy = "LEAST_CONNECTIONS"
     health_checker {
         protocol = "HTTP" 
     }
+    name = "Backend set LB"
+    policy = "LEAST_CONNECTIONS"
 }
 
 resource "oci_load_balancer_backend" "backend01" {
