@@ -1,8 +1,3 @@
-# Get list of availability domains
-data "oci_identity_availability_domains" "ads" {
-  compartment_id = var.tenancy_ocid
-}
-
 # Get a list of supported images based on the shape, operating system and operation system version
 data "oci_core_images" "compute_images" {
   compartment_id = var.compartment_ocid
